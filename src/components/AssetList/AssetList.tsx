@@ -53,7 +53,7 @@ const AssetList = () => {
 							type="list"
 							key={asset.id}
 							asset={asset}
-							onSelect={(e) => handleRemoveAsset(asset.id, e)}
+							onSelect={() => handleRemoveAsset(asset.id)}
 						/>
 					))}
 					</tbody>
