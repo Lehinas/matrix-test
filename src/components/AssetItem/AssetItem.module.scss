@@ -1,0 +1,54 @@
+.assetItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: #292929;
+  }
+
+  &.selected {
+    background: #363636;
+    border: 1px solid #4CAF50;
+  }
+
+  .assetInfo {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    padding: 5px 0;
+  }
+
+  .name {
+    font-weight: bold;
+    color: white;
+    text-align: left;
+  }
+
+  .price {
+    color: #ccc;
+    text-align: center;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .change {
+    font-size: 14px;
+    text-align: right;
+  }
+}
+.positive {
+  color: #4CAF50;
+}
+
+.negative {
+  color: #F44336;
+}

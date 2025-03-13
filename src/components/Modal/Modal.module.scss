@@ -1,0 +1,146 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 20px;
+}
+
+.search {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444;
+  background: #333;
+  color: white;
+  border-radius: 4px;
+  outline: none;
+
+  &:focus {
+    border-color: #4CAF50;
+  }
+}
+
+.assetList {
+  max-height: 200px;
+  overflow-y: auto;
+  background: #333;
+  padding: 10px;
+  border-radius: 16px;
+
+  &::-webkit-scrollbar {
+    width: 8px; /* Ширина скроллбара */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #222; /* Фон трека */
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #555; /* Цвет ползунка */
+    border-radius: 4px;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #777; /* Цвет ползунка при наведении */
+    }
+  }
+}
+
+.amountContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.amountInput {
+  padding: 10px;
+  border: 1px solid #666;
+  background: #222;
+  color: white;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  text-align: center;
+
+  &:focus {
+    border-color: #4CAF50;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  -moz-appearance: textfield;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+
+  button {
+    flex: 1;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+    text-align: center;
+  }
+
+  .btn {
+    background: #d9534f;
+
+    &:hover {
+      background: #c9302c;
+    }
+  }
+
+
+}
+
+.noResults {
+  text-align: center;
+  color: #888;
+  margin: 10px 0;
+}
